@@ -49,13 +49,16 @@ endforeach()
 
 
 
+
 # Add the main executable, with Release and Debug mode.
-add_executable(${EXEC_NAME} ${SOURCES} ${HEADERS} ${TEMPLATES})
-target_link_libraries(${EXEC_NAME} ${LIBRARIES})
-target_compile_options(${EXEC_NAME} PRIVATE
-    $<$<CONFIG:Debug>:${DEBUG_FLAGS}> 
-    $<$<CONFIG:Release>:${RELEASE_FLAGS}>               
-)
+if (NOT ${SOURCES} STREQUAL "") 
+    add_executable(${EXEC_NAME} ${SOURCES} ${HEADERS} ${TEMPLATES})
+    target_link_libraries(${EXEC_NAME} ${LIBRARIES})
+    target_compile_options(${EXEC_NAME} PRIVATE
+        $<$<CONFIG:Debug>:${DEBUG_FLAGS}> 
+        $<$<CONFIG:Release>:${RELEASE_FLAGS}>               
+    )
+endif()
 
 # Add tests only for Debug mode.
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
