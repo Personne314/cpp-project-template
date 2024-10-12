@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # MIT License
 
 # Copyright (c) 2024 [Louis FOULOU]
@@ -23,7 +22,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# A appeler lors de la première construction de l'environnement.
+# Call this to initialize the project environment.
 cd build/release
 cmake -S ../.. -B . -DCMAKE_BUILD_TYPE=Release
 ./build_root_makefile.sh

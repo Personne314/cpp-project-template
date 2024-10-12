@@ -102,6 +102,7 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
 
+# Add a rule to run the main executable.
 add_custom_target(
     run 
     COMMAND ./${EXEC_NAME}
