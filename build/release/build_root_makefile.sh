@@ -52,7 +52,7 @@
     echo "	@make -s -C build/debug build_root_makefile"
 	echo "	@echo \"[Debug Mode]\""
     echo ""
-    echo "init:"
+    echo "update:"
 	echo "	@cmake -S . -B build/release -DCMAKE_BUILD_TYPE=Release"
     echo "	@make -s -C build/release build_root_makefile"
 	echo "	@echo \"[Release Mode]\""
