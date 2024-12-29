@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ 
 # This script create a makefile in the root of the project allowing you to call 
 # CMake Makefile build tragets from there, plus somme command allowing you to 
 # switch between Release mode and Debug mode and executing tests.
