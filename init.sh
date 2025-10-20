@@ -2,8 +2,7 @@
 
 # Call this to initialize the project environment.
 cd build/release
-cmake -S ../.. -B . -DCMAKE_BUILD_TYPE=Release
+cmake -S ../.. -B . -DCMAKE_BUILD_TYPE=Debug
 ./build_root_makefile.sh
-echo "Environment sucessfully initialised"
-echo "[Release Mode]"
-rm -f ../../init.sh
+echo "Environment sucessfully initialized"
+echo "[Debug Mode]"
