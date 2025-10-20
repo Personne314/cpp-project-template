@@ -41,4 +41,8 @@
 
 } > ../../Makefile
 
+# Copy the json for clangd.
+rm -f ../../compile_commands.json
+cp compile_commands.json ../../compile_commands.json 2>/dev/null
+
 echo "Successfully created root Makefile"
